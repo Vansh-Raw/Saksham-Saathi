@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saksham Saathi - Cyber Crime</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="../styles.css">
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="Saksham Saathi logo" class="logo">
+    <div class="header-content">
+      <h1>Cyber Crime</h1>
+      <p id="quote"></p>      
+    </div>
+  </header>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="drug_abuse.html">Drug Abuse</a></li>
+            <li><a href="bullying.html">Bullying</a></li>
+            <li><a href="help.html">Help</a></li>
+            <li><a href="userStories.html">User Stories</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div>
+        <h2>Preventing and Reporting Cyber Crime</h2>
+        <p>Cyber crime is a growing concern in today's digital age. It can take many forms, such as hacking, identity theft, and online fraud. At Saksham Saathi, we provide resources and guidance on how to protect yourself and your loved ones from cyber crime and what to do if you become a victim.</p>
+
+        <h3>Cybercrime Quiz</h3>
+        <p style="text-align: center">Test your knowledge of cybercrime with this fun and interactive quiz!</p>
+        <div id="quiz-container" style="text-align: center">
+            <a data-quiz="Q04OPZ66N" data-type=4 data-fullscreen="true" href="https://take.quiz-maker.com/Q04OPZ66N">Click here to take the quiz</a>
+        </div>
+
+        <h3>How to Report Cyber Crime</h3>
+        <p>If you are a victim of cybercrime, you should report it to the appropriate authorities as soon as possible. Here are some steps you can follow:</p>
+        <ol>
+            <li>Gather evidence: Take screenshots, save emails, and collect any other relevant information about the crime.</li>
+            <li>File a complaint: You can file a complaint with the local police or with a federal agency, depending on the type of crime. Here are some websites where you can file a complaint:</li>
+            <ul>
+                <li><a href="https://www.ic3.gov/">Internet Crime Complaint Center (IC3)</a>: File a complaint related to internet crime, such as phishing, hacking, or online fraud.</li>
+                <li><a href="https://www.fbi.gov/contact-us/field-offices">Federal Bureau of Investigation (FBI)</a>: Contact your local FBI field office to report cybercrime, such as cyberstalking, online threats, or child exploitation.</li>
+                <li><a href="https://www.justice.gov/criminal-ccips/reporting-computer-internet-related-or-cyber-crime">Computer Crime and Intellectual Property Section (CCIPS)</a>: Report computer and intellectual property crimes, such as copyright infringement, trademark fraud, or trade secret theft.</li>
+            </ul>
+            <li>Follow up: After you file a complaint, you may be contacted by law enforcement for further information or to provide additional evidence. Be sure to follow up and cooperate with the authorities to help them investigate and prosecute the crime.</li>
+        </ol>
+        
+        <h3>Cybercrime Incidents by Year</h3>
+        <canvas id="cybercrime-incidents-chart" width="500" height="200"></canvas>
+    </main>
+    <footer>
+        <p>&copy; 2023 Saksham Saathi. All rights reserved.</p>
+        <div id="google_translate_element"></div>
+    </footer>
+
+    <script>
+        // Fetch cybercrime incidents data from a JSON file or API
+        fetch('cybercrime_incidents.json')
+          .then(response => response.json())
+          .then(data => {
+                // Extract the years and incident counts from the data
+              const years = data.map(item => item.year);
+                const incidents = data.map(item => item.incidents);
+
+                // Create a new Chart.js bar chart
+                const ctx = document.getElementById('cybercrime-incidents-chart').getContext('2d');
+                const chart = new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: years,
+                        datasets: [{
+                            label: 'Cybercrime Incidents',
+                            data: incidents,
+                            backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                            borderColor: 'rgba(75, 192, 192, 1)',
+                           borderWidth: 1
+                       }]
+                    },
+                    options: {
+                        scales: {
+                            y: {
+                                beginAtZero: true
+                            }
+                        }
+                    }
+                });
+            })
+          .catch(error => console.error('Error fetching data:', error));
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

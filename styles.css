@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+  }
+  
+  header {
+    background-color: #89CFF0;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    color: white;
+  }
+  
+.logo {
+    width: 100px;
+    margin-right: 1rem;
+  }
+  
+.search-bar {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    padding: 0.5rem;
+    border-radius: 3px;
+  }  
+  nav {
+    background-color: #e9ecef;
+    padding: 1rem;
+  }
+  
+  nav ul {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  nav ul li {
+    list-style: none;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #343a40;
+    padding: 0.5rem;
+  }
+  
+  main {
+    padding: 2rem;
+  }
+  
+  main h2 {
+    margin-bottom: 1rem;
+  }
+  
+  main p {
+    margin-bottom: 2rem;
+  }
+  footer {
+    background-color:#89CFF0;
+    text-align: center;
+    padding: 1rem;
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+  }
+   h2, h3, h4, h5, h6 {
+    text-align: center;
+    font-family: 'Roboto Slab', serif;
+    margin-bottom: 1rem;
+  }
+
+  .story-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  .story-form label {
+    font-weight: bold;
+  }
+  
+  .story-form input,
+  .story-form textarea {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+  }
+  
+  .story-form button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .story-form button:hover {
+    background-color: #45a049;
+  }
+
+  #google_translate_element {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+.goog-te-gadget-simple {
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px 10px;
+  }
+
+.goog-te-gadget-simple.goog-te-menu-value {
+    color: #333;
+    font-size: 14px;
+    text-transform: uppercase;
+  }

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Saksham Saathi - Drug Abuse</title>
+ <link rel="stylesheet" href="styles.css">
+ <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>
+ <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="Saksham Saathi logo" class="logo">
+        <div class="header-content">
+          <h1>Drug Abuse</h1>
+          <p id="quote"></p>
+        </div>
+       </header>
+
+ <nav>
+ <ul>
+ <li><a href="../index.html">Home</a></li>
+ <li><a href="cyber_crime.html">Cyber Crime</a></li>
+ <li><a href="bullying.html">Bullying</a></li>
+ <li><a href="help.html">Help</a></li>
+ <li><a href="userStories.html">User Stories</a></li>
+ </ul>
+ </nav>
+
+ <main style="background-image: url(lb.jpg); background-repeat: no-repeat; background-size: cover; background-position: center; z-index: auto;">
+ <h2>Drug Abuse Awareness: Understanding, Prevention, and Support</h2>
+ <p>Welcome to the Drug Abuse Awareness page of Saksham Saathi. Here, we delve into the complexities of substance abuse, providing valuable insights, resources, and support for individuals and communities affected by this pervasive issue.</p>
+
+ <h2>Understanding Drug Abuse</h2>
+ <p>Drug abuse is a multifaceted problem that affects millions of lives worldwide. From illicit substances to prescription medications, the misuse of drugs can lead to devastating consequences, including addiction, health complications, and social isolation. Understanding the root causes, risk factors, and impact of drug abuse is crucial for effective prevention and intervention efforts.</p>
+
+ <h2>Prevention Strategies</h2>
+ <p>
+ At Saksham Saathi, we believe that prevention is key to addressing drug abuse. Through educational modules, interactive quizzes, and real-life narratives, we empower individuals with the knowledge and skills to make informed choices and resist peer pressure. From peer-to-peer support networks to community outreach initiatives, we strive to create a culture of awareness and resilience that fosters healthy lifestyles and positive decision-making.
+ </p>
+
+ <h2>Support and Rehabilitation</h2>
+ <p>For those struggling with drug abuse, seeking help can be the first step towards recovery. Our platform offers resources and guidance for individuals seeking support, including information on treatment options, counseling services, and peer support groups. We believe in the power of community and collaboration to provide hope, encouragement, and practical assistance to those on the path to recovery.</p>
+
+ <h2>Find Help Nearby</h2>
+ <p>Enter your location, and we'll connect you with nearby rehabilitation centers, making support easily accessible for your journey to recovery:</p>
+ <form id="findHelpForm">
+ <labelfor="location">Location:</label>
+ <input type="text" id="location" name="location" placeholder="Enter your location" required>
+ <button type="submit">Find Help Nearby</button>
+ </form>
+
+ <div id="results" class="hidden">
+ <h3>Nearby Rehabilitation Centers:</h3>
+ <ul id="rehabCentersList"></ul>
+ </div>
+
+ <div id="map" style="height: 400px; width: 100%;"></div>
+</main>
+
+<footer>
+<p>&copy; 2023 Saksham Saathi. All rights reserved.</p>
+<div id="google_translate_element"></div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
