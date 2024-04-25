@@ -27,7 +27,7 @@
         </ul>
     </nav>
 
-    <main>
+    <main style="background-image: url(lb.jpg); background-repeat: no-repeat; background-size: cover; background-position: center; z-index: auto;">
         <div>
         <h2>Preventing and Reporting Cyber Crime</h2>
         <p>Cyber crime is a growing concern in today's digital age. It can take many forms, such as hacking, identity theft, and online fraud. At Saksham Saathi, we provide resources and guidance on how to protect yourself and your loved ones from cyber crime and what to do if you become a victim.</p>
@@ -50,9 +50,24 @@
             </ul>
             <li>Follow up: After you file a complaint, you may be contacted by law enforcement for further information or to provide additional evidence. Be sure to follow up and cooperate with the authorities to help them investigate and prosecute the crime.</li>
         </ol>
-        
+
+        <h3>Download Flow Spector Extension</h3>
+        <p>Flow Spector is a browser extension that helps protect you from cybercrime by detecting and blocking malicious websites and downloads. It also provides real-time alerts and recommendations to help you stay safe online. To download and install Flow Spector, follow these steps:</p>
+        <ol>
+            <li>click the "Download" button.</li>
+            <li>Select your browser (Chrome, Firefox, or Edge) and follow the instructions to install the extension.</li>
+            <li>Once installed, Flow Spector will automatically start protecting you from cyber threats.</li>
+        </ol>
+        <p style="text-align: center"><a href="https://flowspector.com/download" class="button">Download Flow Spector</a></p>
+
         <h3>Cybercrime Incidents by Year</h3>
         <canvas id="cybercrime-incidents-chart" width="500" height="200"></canvas>
+        <h2>Some Related Videos</h2>
+        <div>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/gLeoHS4rN2E?si=-E4vcIAU3mb9iexm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/9EaNSpurn4g?si=CsgFpcEprEoi5w1o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><iframe width="560" height="315" src="https://www.youtube.com/embed/_XACQaYLHj0?si=hVxesqC7ck52jyke" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/qVET1vD3NtQ?si=6k95UPUgzw8Y9d84" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
     </main>
     <footer>
         <p>&copy; 2023 Saksham Saathi. All rights reserved.</p>
@@ -62,8 +77,8 @@
     <script>
         // Fetch cybercrime incidents data from a JSON file or API
         fetch('cybercrime_incidents.json')
-          .then(response => response.json())
-          .then(data => {
+         .then(response => response.json())
+         .then(data => {
                 // Extract the years and incident counts from the data
               const years = data.map(item => item.year);
                 const incidents = data.map(item => item.incidents);
@@ -91,7 +106,7 @@
                     }
                 });
             })
-          .catch(error => console.error('Error fetching data:', error));
+         .catch(error => console.error('Error fetching data:', error));
     </script>
     <script src="script.js"></script>
 </body>

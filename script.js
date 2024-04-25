@@ -17,6 +17,21 @@ const quotes = [
   "Life is 10% what happens to us and 90% how we react to it.",
   "Don't watch the clock; do what it does. Keep going.",
   "The only impossible journey is the one you never begin.",
+  "Believe you can and you're halfway there.",
+"The only way to do great work is to love what you do.",
+"Success is not final, failure is not fatal: It is the courage to continue that counts.",
+"Your limitation—it's only your imagination.",
+"Push yourself, because no one else is going to do it for you.",
+"The harder you work for something, the greater you'll feel when you achieve it.",
+"Don't stop when you're tired. Stop when you're done.",
+"The only person you should try to be better than is the person you were yesterday.",
+"You are capable of more than you know.",
+"Dream it. Believe it. Build it.",
+"It's not about how bad you want it, it's about how hard you're willing to work for it.",
+"Success doesn’t just find you. You have to go out and get it.",
+"The only limit to our realization of tomorrow will be our doubts of today.",
+"The future belongs to those who believe in the beauty of their dreams.",
+"Difficult roads often lead to beautiful destinations."
 ];
 
 const quoteElement = document.getElementById("quote");
@@ -51,6 +66,7 @@ searchInput.addEventListener('keydown', (event) => {
 
 //Drug Abuse
 // Initialize the Google Maps API
+// firstly we  rquire API to implement this and we require domain for that
 function initMap() {
   var options = {
     center: { lat: -34.397, lng: 150.644 },
